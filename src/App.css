@@ -16,6 +16,7 @@ body {
   border-bottom: 3px solid #c23023;
   padding: 10px 20px;
   font-weight: 700;
+  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .btn {
@@ -30,6 +31,7 @@ body {
   position: absolute;
   top: 0;
   right: 3%;
+  z-index: 11;
 }
 
 .menu-bars {

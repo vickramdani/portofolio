@@ -28,10 +28,10 @@ const About = () => {
   };
   return (
     <AboutWrapper>
-      <div className="header">
+      <div className="header" data-aos="fade-up">
         <h1>About Me</h1>
       </div>
-      <Education className="shadow-lg">
+      <Education className="shadow-lg" data-aos="fade-up">
         <h2>Education</h2>
         <div className="edu">
           <img
@@ -46,7 +46,7 @@ const About = () => {
           </div>
         </div>
       </Education>
-      <Education className="shadow-lg">
+      <Education className="shadow-lg" data-aos="fade-up">
         <h2>Training</h2>
         <div className="edu">
           <img
@@ -113,7 +113,7 @@ const About = () => {
           </div>
         </div>
       </Education>
-      <Skill>
+      <Skill data-aos="fade-up">
         <h2>Skills</h2>
         {SkillData.map((skill) => (
           <ul>

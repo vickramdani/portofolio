@@ -7,7 +7,6 @@ export const ProjectWrapper = styled.section`
   align-items: center;
   flex-direction: column;
   margin-top: 140px;
-  overflow-x: hidden;
 `;
 
 export const ProjectList = styled.div`
@@ -15,7 +14,7 @@ export const ProjectList = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 30px;
-  width: 100vw;
+  width: 90vw;
   padding: 80px;
   @media ${Device.tablet} {
     display: flex;
@@ -26,6 +25,10 @@ export const ProjectList = styled.div`
   }
   @media ${Device.mobile} {
     padding: 40px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 `;
 

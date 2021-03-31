@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { Button } from "react-bootstrap";
 import profile from "../asset/profile.png";
@@ -16,15 +16,15 @@ import {
 const Home = () => {
   return (
     <HomeWrapper>
-      <div className="header-txt">
+      <div className="header-txt" data-aos="slide-right">
         <NameHeaderOne>Muhammad</NameHeaderOne>
         <NameHeaderTwo>Vickramdani</NameHeaderTwo>
         <JobTitle>Front End Developer</JobTitle>
-        <Link to="/project">
-          <Button variant="danger" size="lg" className="btn">
+        <NavLink to="/project">
+          <Button variant="danger" size="lg">
             View Projects
           </Button>
-        </Link>
+        </NavLink>
       </div>
       <div>
         <img src={photo} alt="profile" className="photo" />

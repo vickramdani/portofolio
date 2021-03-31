@@ -8,7 +8,8 @@ export const HomeWrapper = styled.div`
   color: #fff;
   padding-left: 160px;
   font-family: "Montserrat Alternates", sans-serif;
-  z-index: -1;
+  z-index: 1;
+  overflow-x: hidden;
   position: relative;
   & .profile {
     min-width: 40vw;
@@ -47,32 +48,25 @@ export const HomeWrapper = styled.div`
       bottom: 20%;
       right: 6%;
     }
-    @media ${Device.mobile} {
-      height: 100vh;
-      & .header-txt {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin-bottom: 16em;
-        & .btn {
-          font-size: 13px;
-        }
-      }
-      & .profile {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-      }
+  }
+  @media ${Device.mobile} {
+    height: 100vh;
+    & .header-txt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 16em;
+      z-index: 2;
+    }
+    & .profile {
+      display: none;
+    }
 
-      & .photo {
-        width: 120vw;
-        bottom: 21%;
-        right: -5%;
-      }
+    & .photo {
+      width: 120vw;
+      bottom: 19%;
+      right: -5%;
     }
   }
 `;
@@ -98,6 +92,7 @@ export const NameHeaderTwo = styled.h1`
   }
   @media ${Device.mobile} {
     font-size: 35px;
+    color: #c23023;
   }
 `;
 

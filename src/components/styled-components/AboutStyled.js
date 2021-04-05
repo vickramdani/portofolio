@@ -110,3 +110,50 @@ export const Skill = styled.div`
     }
   }
 `;
+
+export const Contacts = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 80vw;
+  padding: 30px;
+  background-color: #fff;
+  margin: 30px 0px;
+  border-radius: 10px;
+  & > h2 {
+    margin-bottom: 1.5em;
+    border-bottom: 2px solid rgb(233, 233, 233);
+    padding: 10px 100px;
+  }
+  & .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  & .contact-info > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 30px;
+    color: #c23023;
+  }
+  @media ${Device.tablet} {
+    width: 60vw;
+    & .contact-info {
+      flex-direction: column;
+    }
+  }
+  @media ${Device.mobile} {
+    & > h2 {
+      font-size: 2em;
+      margin-bottom: 1em;
+      border-bottom: 2px solid rgb(233, 233, 233);
+      padding: 10px 30px;
+    }
+    & .contact-info > div > p {
+      font-size: 10px;
+    }
+  }
+`;

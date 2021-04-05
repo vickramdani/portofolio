@@ -8,7 +8,11 @@ import {
   AboutWrapper,
   Education,
   Skill,
+  Contacts,
 } from "./styled-components/AboutStyled";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import SertiOne from "../asset/project-app/serti-1.PNG";
 import SertiTwo from "../asset/project-app/serti-2.PNG";
@@ -130,6 +134,24 @@ const About = () => {
           </ul>
         ))}
       </Skill>
+      <Contacts data-aos="fade-up">
+        <h2>Contact:</h2>
+        <div className="contact-info">
+          <div>
+            <FontAwesomeIcon icon={faGithub} size="3x" />
+            <p>vickramdani</p>
+          </div>
+          <div>
+            <FontAwesomeIcon icon={faEnvelope} size="3x" />
+            <p>muhammadvicramdani@gmail.com</p>
+          </div>
+
+          <div>
+            <FontAwesomeIcon icon={faTwitter} size="3x" />
+            <p>@vickramdani</p>
+          </div>
+        </div>
+      </Contacts>
       <ScrollToTop />
     </AboutWrapper>
   );

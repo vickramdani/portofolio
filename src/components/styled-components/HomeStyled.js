@@ -21,6 +21,23 @@ export const HomeWrapper = styled.div`
     bottom: 25%;
     right: 3%;
   }
+  @media ${Device.desktop} {
+    padding-left: 80px;
+    & .profile {
+      min-width: 40vw;
+      height: 100vh;
+      position: absolute;
+
+      top: 10%;
+      left: 0;
+    }
+    & .photo {
+      width: 40vw;
+      bottom: 22%;
+      right: 1%;
+    }
+  }
+
   @media ${Device.tablet} {
     justify-content: center;
     align-items: center;

@@ -21,28 +21,10 @@ const NavModal = ({ sideBar, showSidebar }) => {
           <NavLink to="/project">Projects</NavLink>
         </li>
         <li className="links">
-          <NavLink to="/about">About Me</NavLink>
+          <NavLink to="/about">About</NavLink>
         </li>
       </ul>
     </nav>
-
-    // <NavLinks
-    //   id="flyoutMenu"
-    //   onMouseDown={handleMouseDown}
-    //   className={`visibility: ${menuVisibility === true ? "show" : "hidden"}`}
-    // >
-    //   <h2 className="links">
-    //     <NavLink to="/" exact>
-    //       Home
-    //     </NavLink>
-    //   </h2>
-    //   <h2 className="links">
-    //     <NavLink to="/project">Projects</NavLink>
-    //   </h2>
-    //   <h2 className="links">
-    //     <NavLink to="/about">About Me</NavLink>
-    //   </h2>
-    // </NavLinks>
   );
 };
 

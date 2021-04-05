@@ -3,6 +3,7 @@ import Modal from "react-bootstrap/Modal";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import { Button } from "react-bootstrap";
 import { SkillData } from "./portofolio-data/SkillData";
+import ScrollToTop from "./ScrollToTop";
 import {
   AboutWrapper,
   Education,
@@ -116,8 +117,8 @@ const About = () => {
       <Skill data-aos="fade-up">
         <h2>Skills</h2>
         {SkillData.map((skill) => (
-          <ul>
-            <li key={skill.id}>
+          <ul key={skill.id}>
+            <li>
               <p>{skill.skill}</p>
               <ProgressBar
                 now={skill.rating}
@@ -129,6 +130,7 @@ const About = () => {
           </ul>
         ))}
       </Skill>
+      <ScrollToTop />
     </AboutWrapper>
   );
 };

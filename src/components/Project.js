@@ -1,6 +1,7 @@
 import React from "react";
 import { ProjectData } from "./portofolio-data/ProjectData";
 import Card from "react-bootstrap/Card";
+import ScrollToTop from "./ScrollToTop";
 import {
   ProjectWrapper,
   ProjectList,
@@ -13,6 +14,7 @@ const Project = () => {
       <div className="header" data-aos="fade-up">
         <h1>Project list:</h1>
       </div>
+      <ScrollToTop />
       <ProjectList>
         {ProjectData.map((project) => (
           <ProjectCard key={project.id}>

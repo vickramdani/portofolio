@@ -5,14 +5,24 @@ import { Device } from "../media-queries/Breakpoint";
 const activeClassName = "nav-item-active";
 
 export const NavWrapper = styled.section`
-  position: absolute;
+  /* position: absolute;
   top: 0;
   right: 0;
   font-size: 1.5em;
   padding: 20px 80px 20px 0px;
-  z-index: 10;
+  z-index: 10; */
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px 80px 20px 0px;
+  display: none;
   @media ${Device.mobile} {
     display: none;
+  }
+  @media ${Device.tablet} {
+    display: block;
+    padding: 17px;
+    text-align: right;
   }
 `;
 
@@ -43,6 +53,6 @@ export const NavLinks = styled(NavLink).attrs({ activeClassName })`
     border-bottom: 1px solid #fff;
   }
   @media ${Device.tablet} {
-    margin-right: 30px;
+    font-size: 1.5rem;
   }
 `;

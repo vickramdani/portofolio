@@ -1,11 +1,13 @@
 import React from "react";
+
 import { ProjectData } from "./portofolio-data/ProjectData";
-import Card from "react-bootstrap/Card";
+// import Card from "react-bootstrap/Card";
 import ScrollToTop from "./ScrollToTop";
 import {
   ProjectWrapper,
   ProjectList,
   ProjectCard,
+  BtnLinks,
 } from "./styled-components/ProjectStyled";
 
 const Project = () => {
@@ -17,30 +19,32 @@ const Project = () => {
       <ScrollToTop />
       <ProjectList>
         {ProjectData.map((project) => (
-          <ProjectCard key={project.id}>
-            <Card className="project-card shadow-lg" data-aos="fade-up">
-              <Card.Img
-                variant="top"
-                src={project.image}
-                className="project-img"
-              />
-              <Card.Body>
-                <Card.Title className="project-title">
-                  {project.title}
-                </Card.Title>
-                <Card.Text className="project-txt">
-                  {project.description}
-                </Card.Text>
-              </Card.Body>
-              <Card.Body className="project-links">
-                <Card.Link href={project.github} target="_blank">
-                  Source Code
-                </Card.Link>
-                <Card.Link href={project.linkWeb} target="_blank">
-                  Preview
-                </Card.Link>
-              </Card.Body>
-            </Card>
+          <ProjectCard key={project.id} data-aos="fade-up">
+            <div className="card-inner">
+              <div className="card-front">
+                <img src={project.image} alt={project.title} />
+              </div>
+              <div className="card-back">
+                <h1>{project.title}</h1>
+                <p>{project.description}</p>
+                <div className="btn-links">
+                  <BtnLinks
+                    variant="outline-light"
+                    href={project.github}
+                    target="_blank"
+                  >
+                    Source Code
+                  </BtnLinks>
+                  <BtnLinks
+                    variant="success"
+                    href={project.linkWeb}
+                    target="_blank"
+                  >
+                    Preview App
+                  </BtnLinks>
+                </div>
+              </div>
+            </div>
           </ProjectCard>
         ))}
       </ProjectList>

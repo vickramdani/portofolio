@@ -1,122 +1,94 @@
 import styled from "styled-components";
 import { Device } from "../media-queries/Breakpoint";
 
+// #def4e4 #0b6623
+
 export const HomeWrapper = styled.div`
+  height: 100vh;
+  background-color: #fff;
+  background-image: radial-gradient(
+    180% 430px at 50% -30px,
+    #0b6623 75%,
+    transparent 75%
+  );
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  color: #fff;
-  padding-left: 160px;
-  font-family: "Montserrat Alternates", sans-serif;
-  z-index: 1;
-  overflow-x: hidden;
-  position: relative;
-  & .profile {
-    min-width: 40vw;
-    height: 100vh;
-  }
-  & .photo {
-    width: 45vw;
-    position: absolute;
-    bottom: 25%;
-    right: 3%;
-  }
-  @media ${Device.desktop} {
-    padding-left: 80px;
-    & .profile {
-      min-width: 40vw;
-      height: 100vh;
-      position: absolute;
-
-      top: 10%;
-      left: 0;
-    }
-    & .photo {
-      width: 40vw;
-      bottom: 22%;
-      right: 1%;
-    }
-  }
-
-  @media ${Device.tablet} {
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-left: 0px;
-    height: 100vh;
-    & .header-txt {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-bottom: 25em;
-    }
-    & .profile {
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      z-index: -1;
-      top: 0;
-      left: 0;
-    }
-
-    & .photo {
-      width: 100vw;
-      bottom: 20%;
-      right: 6%;
-    }
-  }
+  flex-direction: column;
   @media ${Device.mobile} {
-    height: 100vh;
-    & .header-txt {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin-bottom: 16em;
-      z-index: 2;
-    }
-    & .profile {
-      display: none;
-    }
-
-    & .photo {
-      width: 120vw;
-      bottom: 19%;
-      right: -5%;
-    }
+    background-image: radial-gradient(
+      180% 900px at 50% -30px,
+      #0b6623 75%,
+      transparent 75%
+    );
+  }
+  @media ${Device.tablet} {
+    background-image: radial-gradient(
+      180% 700px at 50% -30px,
+      #0b6623 75%,
+      transparent 75%
+    );
+  }
+  @media ${Device.laptopM} {
+    background: #def4e4;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background: linear-gradient(45deg, #fff 60%, #0b6623 40%);
   }
 `;
 
-export const NameHeaderOne = styled.h1`
-  font-size: 65px;
+export const HeaderTittle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media ${Device.laptopM} {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+`;
+
+export const HeaderTxt = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  @media ${Device.laptopM} {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+`;
+
+export const FirstName = styled.h3`
+  color: #2a363b;
   font-weight: 700;
+  @media ${Device.mobile} {
+    font-size: 40px;
+  }
   @media ${Device.tablet} {
     font-size: 55px;
   }
-  @media ${Device.mobile} {
-    font-size: 30px;
-  }
 `;
 
-export const NameHeaderTwo = styled.h1`
-  font-size: 75px;
+export const LastName = styled.h2`
+  color: #a7d676;
   font-weight: 700;
-  color: #c23023;
-  @media ${Device.tablet} {
-    font-size: 65px;
-    color: #ddc36d;
-  }
   @media ${Device.mobile} {
-    font-size: 35px;
-    color: #c23023;
+    font-size: 42px;
+  }
+  @media ${Device.tablet} {
+    font-size: 57px;
   }
 `;
 
-export const JobTitle = styled.h2`
-  font-size: 40px;
-  margin-bottom: 20px;
+export const Proffesion = styled.p`
+  color: #2a363b;
+  font-weight: 700;
+  font-size: 19px;
   @media ${Device.mobile} {
-    font-size: 20px;
+    font-size: 25px;
+  }
+  @media ${Device.tablet} {
+    font-size: 35px;
   }
 `;

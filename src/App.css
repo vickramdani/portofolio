@@ -7,31 +7,18 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-image: linear-gradient(120deg, #ddc36d, #fda085);
   color: #000;
 }
 
 .header {
   color: #fff;
-  border-bottom: 3px solid #c23023;
+  border-bottom: 3px solid #fff;
   padding: 10px 20px;
   font-weight: 700;
-  font-family: "Montserrat Alternates", sans-serif;
 }
 
 .btn {
   cursor: pointer;
-}
-
-.navbar {
-  height: 80px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  right: 3%;
-  z-index: 11;
 }
 
 .menu-bars {
@@ -46,7 +33,7 @@ body {
 }
 
 .nav-menu {
-  background-color: #c23023;
+  background-color: #a7d676;
   width: 100vw;
   height: 50vh;
   display: flex;
@@ -97,7 +84,7 @@ body {
 }
 
 .navbar-toggle {
-  background-color: #c23023;
+  background-color: #a7d676;
   width: 100%;
   height: 80px;
   display: flex;
@@ -131,5 +118,28 @@ body {
   }
   100% {
     opacity: 0.5;
+  }
+}
+
+.illust {
+  width: 90vw;
+  height: auto;
+  margin-bottom: 70px;
+}
+
+@media (min-width: 768px) {
+  .menu-bars {
+    margin-right: 2rem;
+    font-size: 3rem;
+  }
+
+  .illust {
+    width: 76vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .illust {
+    width: 40vw;
   }
 }

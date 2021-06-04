@@ -12,10 +12,11 @@ import {
 } from "./styled-components/AboutStyled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 import SertiOne from "../asset/project-app/serti-1.PNG";
 import SertiTwo from "../asset/project-app/serti-2.PNG";
+import SertiDts from "../asset/project-app/dts.jpg";
+import Profile from "../asset/project-app/profile.jpeg";
 
 const About = () => {
   const [modalState, setModalState] = useState("");
@@ -28,6 +29,10 @@ const About = () => {
     setModalState("modal-two");
   };
 
+  const handleShowModalThree = () => {
+    setModalState("modal-three");
+  };
+
   const handleClose = () => {
     setModalState("close");
   };
@@ -36,6 +41,22 @@ const About = () => {
       <div className="header" data-aos="fade-up">
         <h1>About Me</h1>
       </div>
+      <Education className="shadow-lg" data-aos="fade-up">
+        <h2>Profile</h2>
+        <div className="edu">
+          <img src={Profile} alt="foto-profil" />
+          <div className="edu-txt">
+            <h3>Muhammad Vickramdani</h3>
+            <p>
+              Alamat: Jalan Babakan Gunung Gede No. 15, Bogor Tengah, Kota
+              Bogor, Jawa Barat
+            </p>
+            <p>E-mail: muhammadvicramdani@gmail.com</p>
+            <p>No. HP: +62 881-0251-92370</p>
+          </div>
+        </div>
+      </Education>
+
       <Education className="shadow-lg" data-aos="fade-up">
         <h2>Education</h2>
         <div className="edu">
@@ -55,6 +76,37 @@ const About = () => {
         <h2>Training</h2>
         <div className="edu">
           <img
+            src="https://i.pinimg.com/originals/f2/21/4e/f2214e98ce44dae75ba0281dbcc37227.png"
+            alt="digital-talent-schoolarship"
+          />
+          <div className="edu-txt">
+            <h5>September 2019 - November 2019</h5>
+            <h3>KEMKOMINFO - Digital Talent Schoolarship</h3>
+            <p>Topic: Artificial Intelligence</p>
+            <p>Introduction to Python and Machine Learning</p>
+            <Button onClick={handleShowModalOne} variant="danger">
+              View Sertificate
+            </Button>
+
+            <Modal show={modalState === "modal-one"} size="lg" centered>
+              <Modal.Body>
+                <img
+                  src={SertiDts}
+                  alt="sertifikat"
+                  style={{ width: "100%" }}
+                />
+              </Modal.Body>
+              <Modal.Footer>
+                <Button onClick={handleClose} variant="danger">
+                  Close
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </div>
+        </div>
+
+        <div className="edu">
+          <img
             src="https://d17ivq9b7rppb3.cloudfront.net/original/event/diskusi_online_kelas_academy_menjadi_android_developer_expert_logo_140318105211.png"
             alt="dicoding"
           />
@@ -63,11 +115,11 @@ const About = () => {
             <h3>DICODING INDONESIA</h3>
             <p>Topic: Belajar Dasar Pemograman Web</p>
             <p>Introduction to HTML, CSS, and Javascript</p>
-            <Button onClick={handleShowModalOne} variant="danger">
+            <Button onClick={handleShowModalTwo} variant="danger">
               View Sertificate
             </Button>
 
-            <Modal show={modalState === "modal-one"} size="lg" centered>
+            <Modal show={modalState === "modal-two"} size="lg" centered>
               <Modal.Body>
                 <img
                   src={SertiOne}
@@ -97,11 +149,11 @@ const About = () => {
               Learn JS ES6, Web Component, NPM, Webpack, Asynchronous request,
               and building app that display data from API
             </p>
-            <Button onClick={handleShowModalTwo} variant="danger">
+            <Button onClick={handleShowModalThree} variant="danger">
               View Sertificate
             </Button>
 
-            <Modal show={modalState === "modal-two"} size="lg" centered>
+            <Modal show={modalState === "modal-three"} size="lg" centered>
               <Modal.Body>
                 <img
                   src={SertiTwo}
@@ -141,11 +193,6 @@ const About = () => {
             <FontAwesomeIcon icon={faGithub} size="3x" />
             <p>vickramdani</p>
           </div>
-          <div>
-            <FontAwesomeIcon icon={faEnvelope} size="3x" />
-            <p>muhammadvicramdani@gmail.com</p>
-          </div>
-
           <div>
             <FontAwesomeIcon icon={faTwitter} size="3x" />
             <p>@vickramdani</p>

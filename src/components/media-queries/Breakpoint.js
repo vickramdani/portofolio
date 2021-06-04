@@ -1,11 +1,7 @@
-const Size = {
-  mobile: "500px",
-  tablet: "800px",
-  desktop: "1280px",
-};
-
 export const Device = {
-  mobile: `(max-width: ${Size.mobile})`,
-  tablet: `(max-width: ${Size.tablet})`,
-  desktop: `(max-width: ${Size.desktop})`,
+  mobile: `(min-width: 480px)`,
+  tablet: `(min-width: 768px)`,
+  laptopS: `(min-width: 992px)`,
+  laptopM: `(min-width: 1200px)`,
+  laptopXL: `(min-width: 1300px)`,
 };

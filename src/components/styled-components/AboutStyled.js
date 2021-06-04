@@ -7,7 +7,7 @@ export const AboutWrapper = styled.section`
   align-items: center;
   flex-direction: column;
   padding-top: 140px;
-  background-color: #0b6623;
+  background-color: #5d7599;
   @media ${Device.mobile} {
     & .header > h1 {
       font-size: 2em;
@@ -142,7 +142,7 @@ export const Contacts = styled.div`
     align-items: center;
     flex-direction: column;
     margin: 0px 30px;
-    color: #c23023;
+    color: #5d7599;
   }
   & .contact-info > div > p {
     font-size: 10px;

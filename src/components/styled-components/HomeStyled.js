@@ -5,35 +5,28 @@ import { Device } from "../media-queries/Breakpoint";
 
 export const HomeWrapper = styled.div`
   height: 100vh;
-  background-color: #fff;
-  background-image: radial-gradient(
-    180% 430px at 50% -30px,
-    #0b6623 75%,
-    transparent 75%
-  );
+  background: linear-gradient(180deg, #5d7599 50%, #f5f7fa 50%);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   @media ${Device.mobile} {
-    background-image: radial-gradient(
-      180% 900px at 50% -30px,
-      #0b6623 75%,
-      transparent 75%
-    );
+    background: linear-gradient(180deg, #5d7599 50%, #f5f7fa 50%);
   }
   @media ${Device.tablet} {
-    background-image: radial-gradient(
-      180% 700px at 50% -30px,
-      #0b6623 75%,
-      transparent 75%
-    );
+    background: linear-gradient(180deg, #5d7599 50%, #f5f7fa 50%);
+  }
+  @media ${Device.laptopS} {
+    background: #def4e4;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background: linear-gradient(60deg, #fff 60%, #5d7599 40%);
   }
   @media ${Device.laptopM} {
     background: #def4e4;
     flex-direction: row-reverse;
     justify-content: space-around;
-    background: linear-gradient(45deg, #fff 60%, #0b6623 40%);
+    background: linear-gradient(60deg, #fff 60%, #5d7599 40%);
   }
 `;
 
@@ -42,6 +35,11 @@ export const HeaderTittle = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media ${Device.laptopS} {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   @media ${Device.laptopM} {
     justify-content: flex-start;
     align-items: flex-start;
@@ -53,6 +51,10 @@ export const HeaderTxt = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  @media ${Device.laptopS} {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
   @media ${Device.laptopM} {
     justify-content: flex-start;
     align-items: flex-start;
@@ -71,7 +73,7 @@ export const FirstName = styled.h3`
 `;
 
 export const LastName = styled.h2`
-  color: #a7d676;
+  color: #3e6787;
   font-weight: 700;
   @media ${Device.mobile} {
     font-size: 42px;

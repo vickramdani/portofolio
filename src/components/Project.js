@@ -36,7 +36,7 @@ const Project = () => {
                     Source Code
                   </BtnLinks>
                   <BtnLinks
-                    variant="success"
+                    variant="primary"
                     href={project.linkWeb}
                     target="_blank"
                   >

@@ -84,7 +84,7 @@ const About = () => {
             <h3>KEMKOMINFO - Digital Talent Schoolarship</h3>
             <p>Topic: Artificial Intelligence</p>
             <p>Introduction to Python and Machine Learning</p>
-            <Button onClick={handleShowModalOne} variant="danger">
+            <Button onClick={handleShowModalOne} variant="primary">
               View Sertificate
             </Button>
 
@@ -97,7 +97,7 @@ const About = () => {
                 />
               </Modal.Body>
               <Modal.Footer>
-                <Button onClick={handleClose} variant="danger">
+                <Button onClick={handleClose} variant="primary">
                   Close
                 </Button>
               </Modal.Footer>
@@ -115,7 +115,7 @@ const About = () => {
             <h3>DICODING INDONESIA</h3>
             <p>Topic: Belajar Dasar Pemograman Web</p>
             <p>Introduction to HTML, CSS, and Javascript</p>
-            <Button onClick={handleShowModalTwo} variant="danger">
+            <Button onClick={handleShowModalTwo} variant="primary">
               View Sertificate
             </Button>
 
@@ -128,7 +128,7 @@ const About = () => {
                 />
               </Modal.Body>
               <Modal.Footer>
-                <Button onClick={handleClose} variant="danger">
+                <Button onClick={handleClose} variant="primary">
                   Close
                 </Button>
               </Modal.Footer>
@@ -149,7 +149,7 @@ const About = () => {
               Learn JS ES6, Web Component, NPM, Webpack, Asynchronous request,
               and building app that display data from API
             </p>
-            <Button onClick={handleShowModalThree} variant="danger">
+            <Button onClick={handleShowModalThree} variant="primary">
               View Sertificate
             </Button>
 
@@ -162,7 +162,7 @@ const About = () => {
                 />
               </Modal.Body>
               <Modal.Footer>
-                <Button onClick={handleClose} variant="danger">
+                <Button onClick={handleClose} variant="primary">
                   Close
                 </Button>
               </Modal.Footer>
@@ -178,7 +178,7 @@ const About = () => {
               <p>{skill.skill}</p>
               <ProgressBar
                 now={skill.rating}
-                variant="danger"
+                variant="primary"
                 label={`${skill.rating}%`}
                 className="bar"
               />

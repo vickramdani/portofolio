@@ -9,7 +9,7 @@ export const ProjectWrapper = styled.section`
   align-items: center;
   flex-direction: column;
   padding-top: 140px;
-  background-color: #0b6623;
+  background-color: #5d7599;
   @media ${Device.laptopM} {
     margin-top: 0;
     padding-bottom: 30px;
@@ -22,6 +22,18 @@ export const ProjectList = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 30px;
+  @media ${Device.tablet} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
+  @media ${Device.laptopS} {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 30px;
+  }
   @media ${Device.laptopM} {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -33,7 +45,7 @@ export const ProjectList = styled.div`
 export const ProjectCard = styled.div`
   background-color: transparent;
   width: 90vw;
-  height: 36vh;
+  height: 34vh;
   perspective: 1000px;
   & .card-inner {
     position: relative;
@@ -51,14 +63,14 @@ export const ProjectCard = styled.div`
   & .card-back {
     position: absolute;
     width: 100%;
-    height: 33vh;
+    height: 30vh;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
   }
 
   & .card-front > img {
-    width: 90vw;
-    height: 33vh;
+    width: 100%;
+    height: 30vh;
   }
 
   & .card-back {
@@ -75,7 +87,7 @@ export const ProjectCard = styled.div`
 
     & > p {
       padding: 10px 0;
-      font-size: 13px;
+      font-size: 15px;
     }
 
     & .btn-links {
@@ -85,32 +97,82 @@ export const ProjectCard = styled.div`
     }
   }
   @media ${Device.mobile} {
+    width: 77vw;
+    height: 40vh;
+
+    & .card-front,
+    & .card-back {
+      width: 100%;
+      height: 38vh;
+    }
+
+    & .card-front > img {
+      width: 100%;
+      height: 38vh;
+    }
     & .card-back {
       padding: 22px;
 
       & > h1 {
-        font-size: 26px;
+        font-size: 28px;
         padding-bottom: 10px;
       }
 
       & > p {
         font-size: 18px;
-        margin-bottom: 23px;
+        margin-bottom: 15px;
       }
     }
   }
   @media ${Device.tablet} {
+    width: 45vw;
+    height: 30vh;
+
+    & .card-front,
+    & .card-back {
+      width: 100%;
+      height: 30vh;
+    }
+
+    & .card-front > img {
+      width: 100%;
+      height: 30vh;
+    }
+
     & .card-back {
       padding: 24px;
 
       & > h1 {
-        font-size: 40px;
+        font-size: 18px;
         padding-bottom: 15px;
       }
 
       & > p {
-        font-size: 24px;
-        margin-bottom: 26px;
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  @media ${Device.laptopS} {
+    width: 42vw;
+    height: 33vh;
+    & .card-front,
+    & .card-back {
+      width: 100%;
+      height: 33vh;
+    }
+
+    & .card-front > img {
+      width: 100%;
+      height: 33vh;
+    }
+    & .card-back {
+      & > h1 {
+        font-size: 25px;
+      }
+
+      & > p {
+        font-size: 14px;
       }
     }
   }
@@ -143,8 +205,11 @@ export const ProjectCard = styled.div`
 `;
 
 export const BtnLinks = styled(Button)`
-  font-size: 16px;
+  font-size: 14px;
+  @media ${Device.mobile} {
+    font-size: 18px;
+  }
   @media ${Device.tablet} {
-    font-size: 20px;
+    font-size: 12px;
   }
 `;

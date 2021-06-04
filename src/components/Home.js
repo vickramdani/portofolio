@@ -12,7 +12,7 @@ import {
   LastName,
   Proffesion,
 } from "./styled-components/HomeStyled";
-import Illust from "../asset/illust.png";
+import Illust from "../asset/ilust.png";
 
 const Home = () => {
   return (
@@ -30,7 +30,7 @@ const Home = () => {
           <Proffesion>Frontend Developer</Proffesion>
         </HeaderTxt>
         <NavLink to="/project">
-          <Button variant="outline-success" size="lg">
+          <Button variant="outline-primary" size="lg">
             View Projects
           </Button>
         </NavLink>

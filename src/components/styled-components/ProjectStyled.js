@@ -32,7 +32,7 @@ export const ProjectList = styled.div`
 
 export const ProjectCard = styled.div`
   background-color: transparent;
-  min-width: 90vw;
+  width: 90vw;
   height: 36vh;
   perspective: 1000px;
   & .card-inner {
@@ -57,7 +57,7 @@ export const ProjectCard = styled.div`
   }
 
   & .card-front > img {
-    min-width: 90vw;
+    width: 90vw;
     height: 33vh;
   }
 
@@ -115,7 +115,7 @@ export const ProjectCard = styled.div`
     }
   }
   @media ${Device.laptopM} {
-    min-width: 40vw;
+    width: 40vw;
     height: 40vh;
     & .card-front,
     & .card-back {
@@ -127,7 +127,7 @@ export const ProjectCard = styled.div`
     }
 
     & .card-front > img {
-      min-width: 40vw;
+      width: 40vw;
       height: 40vh;
     }
     & .card-back {

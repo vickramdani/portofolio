@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
-import ProgressBar from "react-bootstrap/ProgressBar";
 import { Button } from "react-bootstrap";
 import { SkillData } from "./portofolio-data/SkillData";
 import ScrollToTop from "./ScrollToTop";
@@ -17,6 +16,7 @@ import SertiOne from "../asset/project-app/serti-1.PNG";
 import SertiTwo from "../asset/project-app/serti-2.PNG";
 import SertiDts from "../asset/project-app/dts.jpg";
 import Profile from "../asset/project-app/profile.jpeg";
+import Invektor from "../asset/invektor.jpg";
 
 const About = () => {
   const [modalState, setModalState] = useState("");
@@ -72,6 +72,26 @@ const About = () => {
           </div>
         </div>
       </Education>
+
+      <Education className="shadow-lg" data-aos="fade-up">
+        <h2>Experience</h2>
+        <div className="edu">
+          <img src={Invektor} alt="logo-invektor" />
+          <div className="edu-txt">
+            <h5>September 2020 - Present</h5>
+            <h3>Independent Frontend Developer</h3>
+            <h3>INVEKTOR</h3>
+            <p>
+              Build and do maintenance for Invektor landing page company (
+              <a href="https://invektoon.com" target="_blank" rel="noreferrer">
+                https://invektoon.com
+              </a>
+              )
+            </p>
+          </div>
+        </div>
+      </Education>
+
       <Education className="shadow-lg" data-aos="fade-up">
         <h2>Training</h2>
         <div className="edu">
@@ -174,15 +194,7 @@ const About = () => {
         <h2>Skills</h2>
         {SkillData.map((skill) => (
           <ul key={skill.id}>
-            <li>
-              <p>{skill.skill}</p>
-              <ProgressBar
-                now={skill.rating}
-                variant="primary"
-                label={`${skill.rating}%`}
-                className="bar"
-              />
-            </li>
+            <li>{skill.skill}</li>
           </ul>
         ))}
       </Skill>

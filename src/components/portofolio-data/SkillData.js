@@ -31,37 +31,37 @@ export const SkillData = [
   },
   {
     id: 7,
-    skill: "Bootstrap",
-    rating: "80",
-  },
-  {
-    id: 8,
     skill: "SASS",
     rating: "70",
   },
   {
-    id: 9,
+    id: 8,
     skill: "Git",
     rating: "80",
   },
   {
-    id: 10,
+    id: 9,
     skill: "CSS3",
     rating: "85",
   },
   {
-    id: 11,
+    id: 10,
     skill: "HTML5",
     rating: "85",
   },
   {
-    id: 12,
+    id: 11,
     skill: "npm",
     rating: "70",
   },
   {
     id: 13,
     skill: "Responsive Design",
+    rating: "80",
+  },
+  {
+    id: 14,
+    skill: "jQuery",
     rating: "80",
   },
 ];

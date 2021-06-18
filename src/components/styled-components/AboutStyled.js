@@ -105,7 +105,7 @@ export const Skill = styled.div`
   & > ul {
     padding: 10px 40px;
   }
-  & > ul > li > p {
+  & > ul > li {
     font-size: 1.1em;
   }
   @media ${Device.laptopM} {
